@@ -1,21 +1,31 @@
-# Currency Converter（React + TypeScript）
-## デモ
-GitHub Pagesでホストされているデモページはこちらです：
-[https://y2-world.github.io/converter/](https://y2-world.github.io/currency-converter-react/)
+# 💱 Currency Converter（React + TypeScript版）
 
-## 概要
-JavaScriptの学習の一環として、より実用的かつ動的なシステムを目指し、React + TypeScript を用いて再構築した通貨変換アプリです。
-リアルタイムで為替レートを取得し、8通貨（米ドル、ユーロ、英ポンド、豪ドル、カナダドル、韓国ウォン、中国元、台湾ドル）間での換算が可能です。
+JavaScriptとTypeScriptの学習の一環として、React + TypeScriptを使用し、**リアルタイムで為替換算ができる通貨コンバーターアプリ**を構築しました。選択した通貨で金額を入力すると、最新のレートに基づき日本円（JPY）に換算されます。
 
-## 主な機能・特徴
-	•	🔄 為替APIを使用したリアルタイム通貨換算
-	•	🌍 通貨の双方向変換に対応
-	•	⚛️ Reactによるコンポーネント設計
-	•	🔐 TypeScriptによる型安全な実装
-	•	🎯 状態管理にuseState/useEffectを活用
+## 🚀 デモ
 
-## テクノロジー
-	•	React (Vite)
-	•	TypeScript
-	•	Axios（API通信）
- 	•	使用API : https://www.exchangerate-api.com/
+GitHub Pagesでホストされたデモはこちら : [https://y2-world.github.io/currency-converter-react/](https://y2-world.github.io/currency-converter-react/)
+
+## 🔗 使用API
+
+為替レート取得には、**[Frankfurter API](https://www.frankfurter.app/)** を使用しています。APIキー不要で、シンプルなGETリクエストで最新のレートが取得可能です。
+
+## 🌍 対応通貨
+
+以下の8通貨を日本円に換算可能です：
+
+- 🇺🇸 米ドル（USD）
+- 🇪🇺 ユーロ（EUR）
+- 🇬🇧 英ポンド（GBP）
+- 🇦🇺 豪ドル（AUD）
+- 🇨🇦 カナダドル（CAD）
+- 🇰🇷 韓国ウォン（KRW）
+- 🇨🇳 中国元（CNY）
+- 🇹🇼 台湾元（TWD）
+
+## 🛠 使用技術
+
+- React 18
+- TypeScript
+- Axios（API通信）
+- CSS Modules（スタイリング）
