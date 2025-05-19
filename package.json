@@ -9,7 +9,6 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.4",
     "react": "^19.1.0",
@@ -20,11 +19,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "vite build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build:css": "tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -45,9 +47,10 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^20.17.48",
     "autoprefixer": "^10.4.21",
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "^3.4.17"
   }
 }
