@@ -1,16 +1,49 @@
-import { useState } from 'react';
+import { useState } from "react";
+import styles from "./CurrencyConverter.module.css";
 
-const currencies = ["USD", "EUR", "GBP", "AUD", "CAD", "KRW", "CNY", "JPY"];
+const currencies = {
+  // 通貨記号のマッピング
+  USD: "$",
+  EUR: "€",
+  GBP: "£",
+  AUD: "A$",
+  CAD: "C$",
+  KRW: "₩",
+  CNY: "¥",
+  JPY: "¥",
+};
 
 export default function CurrencyConverter() {
   return (
-    <div className="p-4 bg-blue-100 text-center rounded-lg">
-      <h1 className="text-2xl font-bold text-blue-800">Currency Converter</h1>
-      <input
-        type="number"
-        className="mt-4 border border-gray-400 p-2 rounded w-full"
-        placeholder="Enter amount"
-      />
+    <div>
+      <h1 className={styles.title}>Currency Converter</h1>
+
+      <div className={styles.mb4}>
+        <select id="select" className={styles.select} defaultValue="">
+          <option value="" disabled>
+            Select currency
+          </option>
+          {Object.keys(currencies)
+            .filter((cur) => cur !== "JPY")
+            .map((cur) => (
+              <option key={cur} value={cur}>
+                {cur} ({currencies[cur as keyof typeof currencies]})
+              </option>
+          ))}
+        </select>
+      </div>
+      <br></br>
+      <div className={styles.mb4}>
+        <input
+          type="text"
+          id="input"
+          placeholder="Enter amount"
+          className={styles.input}
+        />
+      </div>
+
+      <div id="result" className={styles.result}>
+      </div>
     </div>
   );
 }
