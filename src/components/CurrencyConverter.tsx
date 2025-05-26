@@ -93,6 +93,9 @@ export default function CurrencyConverter() {
       </div>
       <br></br>
       <div className={styles.mb4}>
+      <span className={styles.result}>
+      {symbol}
+      </span>
       <input
         type="text"
         value={inputValue}
