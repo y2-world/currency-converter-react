@@ -34,6 +34,10 @@ label {
   color: #007acc;
 }
 
+.error {
+  color: #ff0000cc;
+}
+
 @media (max-width: 480px) {
   input[type="text"],
   select {
