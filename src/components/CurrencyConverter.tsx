@@ -107,11 +107,11 @@ export default function CurrencyConverter() {
       </div>
       {!error && (
       <div id="result" className={styles.result}>
-        <p className="conversion-result">{convertedValue}</p>
+        <p>{convertedValue}</p>
       </div>
       )}
       {error && <p className={styles.error}>{error}</p>}
-      {!error && exchangeRate && <p className="exchange-rate">{exchangeRate}</p>}
+      {!error && exchangeRate && <p>{exchangeRate}</p>}
     </div>
   );
 }
