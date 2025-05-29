@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./CurrencyConverter.module.css";
 
 const symbols: Record<string, string> = {
