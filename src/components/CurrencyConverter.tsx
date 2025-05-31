@@ -54,7 +54,7 @@ export default function CurrencyConverter() {
       setExchangeRate(`1 ${selectedCurrency} = ${rate} JPY`); // 為替レートを設定
 
       const total = await fetchRate(amount, selectedCurrency);
-      setConvertedValue(`¥${total.toFixed(2)}`);
+      setConvertedValue(`¥${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
     } catch {
       if (!selectedCurrency) {
         setError("通貨を選択してください。"); // 通貨が選択されていない場合のエラー
